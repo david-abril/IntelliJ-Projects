@@ -4,14 +4,4 @@
 #
 # 1) WhatGeneration.java - Week 5, Day 1 Assignment: This script requests the users age and returns the generation that they fit into. 
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
