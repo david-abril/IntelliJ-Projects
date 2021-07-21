@@ -4,56 +4,43 @@ import java.util.Scanner;
 public class ArrayListExercise {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        ArrayList<Integer> numbers = new ArrayList<>(5);
+        ArrayList<Integer> numbers = new ArrayList<>();
 
 // Get user input (5 numbers)
 
-        int i;
-        for (i = 0; i <=4; i++) {
+
+        for (int i = 0; i <=4; i++) {
             System.out.println("Please enter number");
             numbers.add(userInput.nextInt());
         }
 
-        System.out.println(numbers);
-
-// Get sum of array list
+// Set up variables, run operations
 
         int sum = 0;
-        for (i=0; i<numbers.size(); i++){
-            sum += numbers.get(i);
-        }
-
-        System.out.println(sum);
-
-// Get product of array list
-
         long product = 1;
-        for (i = 0; i<numbers.size(); i++){
-            product *= numbers.get(i);
-        }
-
-        System.out.println(product);
-
-// Get largest number of array list
-
         int max = 0;
-        for (i = 0; i<numbers.size(); i++){
-            if (numbers.get(i) > max) {
-                max = numbers.get(i);
+        int min = Integer.MAX_VALUE;
+
+        for (Integer value: numbers) {
+            sum += value;
+            product *= value;
+
+            if (value > max) {
+                max = value;
             }
+
+            if (value < min) {
+                min = value;
+            }
+
         }
 
-        System.out.println(max);
+ // Print results
+        System.out.printf("\nThe sum of the numbers is %s \n", sum);
+        System.out.printf("The product of the numbers is %s \n", product);
+        System.out.printf("The largest of the numbers is %s \n", max);
+        System.out.printf("The smallest of the numbers is %s \n", min);
 
-// Get smallest number of array list
-
-        int min = numbers.get(0);
-        for (i = 0; i<numbers.size(); i++){
-            if (numbers.get(i) < min) {
-                min = numbers.get(i);
-            }
-        }
-        System.out.println(min);
 
     }
 }
